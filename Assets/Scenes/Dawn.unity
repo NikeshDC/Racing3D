@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 725179509}
   - component: {fileID: 725179508}
   m_Layer: 0
-  m_Name: RoadMesh
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 6996731650587043340}
   - component: {fileID: 4434930933711386450}
   m_Layer: 0
-  m_Name: lake
+  m_Name: Lake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
