@@ -5,7 +5,7 @@ public class CameraRotateAround : MonoBehaviour
     public Transform target;
     public float verticalRotationLimitMin = 20f;
     public float verticalRotationLimitMax = 80f;
-    private float rotateFactor = 30f;
+    private float rotateFactor = 15f;
 
     private Touch prevTouch;
 
@@ -49,6 +49,10 @@ public class CameraRotateAround : MonoBehaviour
             Vector3 verticalRotationAxis = verticalRotationAxisEnd - verticalRotationAxisStart;
             transform.RotateAround(target.position, -verticalRotationAxis, verticalMoveAngle);
         }
+        else
+        {
+            Debug.Log("Vertical Limit!!");
+        }
 
         //use horizantal delta movement to move camera around world-up axis
         //and passing through target point
@@ -62,7 +66,8 @@ public class CameraRotateAround : MonoBehaviour
 
     private bool CheckVerticalRotationLimits(float deltaMoveAngle)
     {//return false if rotation changes limit of the object
-       float verticalAngle = Vector3.Angle(transform.position, target.position);
+       float verticalAngle = Vector3.Angle(transform.position - target.position, Vector3.up);
+        Debug.Log("Vertical Angle:" + verticalAngle);
         if (deltaMoveAngle > 0 && verticalAngle < verticalRotationLimitMax)
             return true;
         if(deltaMoveAngle < 0 && verticalAngle > verticalRotationLimitMin)
