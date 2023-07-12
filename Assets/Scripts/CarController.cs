@@ -16,15 +16,7 @@ public class CarController : MonoBehaviour
 
     public void Update()
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
-
-        curMotorTorque = motor;
-        curSteeringAngle = steering;
-        if (Input.GetKey(KeyCode.Space))
-            curBreakingTorque = maxBreakingTorque;
-        else
-            curBreakingTorque = 0;
+        HandleKeyBoardInputs();
     }
 
     public void FixedUpdate()
@@ -46,6 +38,56 @@ public class CarController : MonoBehaviour
             }
         }
     }
+
+    private void HandleKeyBoardInputs()
+    {
+        Accelerate(Input.GetAxis("Vertical"));
+        Steer(Input.GetAxis("Horizontal"));
+
+        if (Input.GetKey(KeyCode.Space))
+            PressBrake();
+        else
+            ReleaseBrake();
+    }
+
+    //for continious inputs ***********************************************
+    public void Brake(float factor)
+    { curBreakingTorque = maxBreakingTorque * factor; }
+
+    public void Accelerate(float factor)
+    { curMotorTorque = maxMotorTorque * factor; }
+
+    public void Steer(float factor) 
+    { curSteeringAngle = maxSteeringAngle * factor; }
+    public void SteerRight(float factor)
+    { //right steering should always have positive angle
+        Steer(Mathf.Abs(factor));
+    }
+    public void SteerLeft(float factor)
+    { //left steering should always have negative angle
+        Steer(-Mathf.Abs(factor));
+    }
+    //*********************************************************************
+
+
+    //for event based inputs***********************************************
+    public void PressBrake()
+    { Brake(1f); }
+    public void ReleaseBrake()
+    { Brake(0f); }
+
+    public void PressAccelerate()
+    { Accelerate(1f); }
+    public void ReleaseAccelerate()
+    { Accelerate(0f); }
+
+    public void SteerToLeft()
+    { SteerLeft(1f); }
+    public void SteerToRight()
+    { SteerRight(1f); }
+    public void ReleaseSteering()
+    { SteerRight(0f); }
+    //*********************************************************************
 }
 
 [System.Serializable]
