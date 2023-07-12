@@ -61,7 +61,7 @@ Material:
     m_Floats:
     - _Depth: 1.8
     - _DepthNormalLerpAmount: -0.1
-    - _Metallic: 0.74
+    - _Metallic: 0.73
     - _NormalStrength: 0.549
     - _PrimaryNormalSpeed: 120
     - _PrimaryNormalStrength: -0.27
@@ -77,6 +77,6 @@ Material:
     - _WaveScale: 10
     - _WaveSpeed: 40
     m_Colors:
-    - _DeepWaterColor: {r: 0.22414553, g: 0.47436607, b: 0.6886792, a: 1}
+    - _DeepWaterColor: {r: 0.22414547, g: 0.47436607, b: 0.6886792, a: 1}
     - _ShallowWaterColor: {r: 0.039215658, g: 0.69615906, b: 0.8980392, a: 0.654902}
   m_BuildTextureStacks: []
