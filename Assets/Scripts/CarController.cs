@@ -16,7 +16,7 @@ public class CarController : MonoBehaviour
 
     public void Update()
     {
-        HandleKeyBoardInputs();
+        //HandleKeyBoardInputs();
     }
 
     public void FixedUpdate()

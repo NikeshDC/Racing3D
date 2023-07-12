@@ -26,7 +26,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - EFFECT_BUMP
-  - EFFECT_HUE_VARIATION
   - GEOM_TYPE_LEAF
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -137,6 +136,6 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HueVariation: {r: 0.56809354, g: 1, b: 0, a: 0.1}
+    - _HueVariation: {r: 0.5686275, g: 1, b: 0, a: 0.1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

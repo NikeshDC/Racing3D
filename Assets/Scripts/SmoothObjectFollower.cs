@@ -10,7 +10,7 @@ public class SmoothObjectFollower : MonoBehaviour
 
     public float smoothFactor = 1f;
 
-    private void Start()
+    private void OnEnable()
     {
        offset = target.position - transform.position;
     }
