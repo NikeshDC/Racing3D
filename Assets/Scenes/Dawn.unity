@@ -186,6 +186,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6007376521593779704, guid: 8b9d29538915c394298eff50c8947a56,
+        type: 3}
+      propertyPath: backlight
+      value: 
+      objectReference: {fileID: 2100000, guid: 89e8ecb902415d0459623138aef765c2, type: 2}
+    - target: {fileID: 6007376521593779704, guid: 8b9d29538915c394298eff50c8947a56,
+        type: 3}
+      propertyPath: fullBackLightEmission
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7322450962430066414, guid: 8b9d29538915c394298eff50c8947a56,
         type: 3}
       propertyPath: m_Name

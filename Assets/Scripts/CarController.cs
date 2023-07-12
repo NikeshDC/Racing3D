@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEngine.Android;
 
 public class CarController : MonoBehaviour
 {
@@ -13,6 +14,17 @@ public class CarController : MonoBehaviour
     private float curMotorTorque; // the motor torque to apply to wheel in next fixed update
     private float curSteeringAngle;
     private float curBreakingTorque;
+
+    [SerializeField] private Material backlight;
+    private Color backLightBaseColor;
+    private float baseBackLightEmission = 0.5f;
+    private float fullBackLightEmission = 6f;
+
+    private void Start()
+    {
+        backLightBaseColor = backlight.color;
+        ChangeBackLight(baseBackLightEmission);
+    }
 
     public void Update()
     {
@@ -72,9 +84,15 @@ public class CarController : MonoBehaviour
 
     //for event based inputs***********************************************
     public void PressBrake()
-    { Brake(1f); }
+    { 
+        Brake(1f);
+        ChangeBackLight(fullBackLightEmission);
+    }
     public void ReleaseBrake()
-    { Brake(0f); }
+    { 
+        Brake(0f);
+        ChangeBackLight(baseBackLightEmission);
+    }
 
     public void PressAccelerate()
     { Accelerate(1f); }
@@ -88,6 +106,14 @@ public class CarController : MonoBehaviour
     public void ReleaseSteering()
     { SteerRight(0f); }
     //*********************************************************************
+
+    private void ChangeBackLight(float emission)
+    {
+        if (backlight == null)
+            return;
+        Color finalColor = backLightBaseColor * emission;
+        backlight.SetColor("_EmissionColor", finalColor);
+    }
 }
 
 [System.Serializable]
