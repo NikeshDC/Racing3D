@@ -60,18 +60,18 @@ Material:
     m_Ints: []
     m_Floats:
     - _Depth: 1.8
-    - _DepthNormalLerpAmount: -0.1
-    - _Metallic: 0.73
-    - _NormalStrength: 0.549
+    - _DepthNormalLerpAmount: -0.23
+    - _Metallic: 0.747
+    - _NormalStrength: 0.755
     - _PrimaryNormalSpeed: 120
-    - _PrimaryNormalStrength: -0.27
+    - _PrimaryNormalStrength: -0.54
     - _PrimaryTiling: 40
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SecondaryNormalSpeed: -80
-    - _SecondaryNormalStrength: 0.97
+    - _SecondaryNormalStrength: 0.89
     - _SecondaryTiling: 30
-    - _Specular: 0.952
+    - _Specular: 0.941
     - _Strength: 0.33
     - _WaveDisplacement: 0
     - _WaveScale: 10

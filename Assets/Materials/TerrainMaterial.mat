@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4260584158910234289
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TerrainMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 8eb9c42bf2a0f5d4aa32eded4f316248,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SplatA:
+        m_Texture: {fileID: 2800000, guid: 582514cf0a8daa14089e7e810c7631c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatANormal:
+        m_Texture: {fileID: 2800000, guid: 6d3c5d8db5c204745b1d0cf7d87b27b1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatB:
+        m_Texture: {fileID: 2800000, guid: 38c619788ac5a24459e24d300b098bd6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatBNormal:
+        m_Texture: {fileID: 2800000, guid: f5dcec9dc671a0e4d834d1477b24211f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatG:
+        m_Texture: {fileID: 2800000, guid: 1bdba599c2ac6db4a85700dfc256d69f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatGNormal:
+        m_Texture: {fileID: 2800000, guid: 2b6c0bf12f7327e49990ed6f61cc8de4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatMap:
+        m_Texture: {fileID: 2800000, guid: ffb242a65373345458735a9e0adc7900, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatR:
+        m_Texture: {fileID: 2800000, guid: 582514cf0a8daa14089e7e810c7631c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatRNormal:
+        m_Texture: {fileID: 2800000, guid: 6d3c5d8db5c204745b1d0cf7d87b27b1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D_Array:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AStength: 0.025
+    - _AlphaFactor: 0.03
+    - _BStrength: 1
+    - _GStrength: 1
+    - _Metallic: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RStrength: 1
+    - _RStrength_1: 0
+    - _RStrength_2: 0
+    - _Smoothness: 0
+    - _SplatANormalStrength: 1
+    - _SplatBNormalStrength: 2
+    - _SplatGNormalStrength: 2
+    - _SplatRNormalStrength: 3
+    m_Colors:
+    - _SplatAColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SplatATiling: {r: 40, g: 40, b: 0, a: 0}
+    - _SplatBColor: {r: 1, g: 1, b: 1, a: 0}
+    - _SplatBTiling: {r: 1000, g: 1000, b: 0, a: 0}
+    - _SplatGColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SplatGTiling: {r: 1000, g: 1000, b: 0, a: 0}
+    - _SplatRColor: {r: 1, g: 1, b: 1, a: 0}
+    - _SplatRTiling: {r: 50, g: 50, b: 0, a: 0}
+  m_BuildTextureStacks: []

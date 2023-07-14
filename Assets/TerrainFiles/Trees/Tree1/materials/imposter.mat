@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _ENVIRONMENTREFLECTIONS_OFF
-  - _NORMALMAP
   - _RECEIVE_SHADOWS_OFF
   - _SPECULARHIGHLIGHTS_OFF
   - _SURFACE_TYPE_TRANSPARENT
@@ -37,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 6dc83da4397572d4687a3a0c1abdea72, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:

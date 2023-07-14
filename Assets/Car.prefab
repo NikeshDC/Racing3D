@@ -324,6 +324,7 @@ MonoBehaviour:
   maxMotorTorque: 400
   maxSteeringAngle: 30
   maxBreakingTorque: 1000
+  backlight: {fileID: 2100000, guid: 89e8ecb902415d0459623138aef765c2, type: 2}
 --- !u!1 &8030846121619149020
 GameObject:
   m_ObjectHideFlags: 0
