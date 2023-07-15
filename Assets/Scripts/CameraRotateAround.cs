@@ -5,7 +5,7 @@ public class CameraRotateAround : MonoBehaviour
     public Transform target;
     public float verticalRotationLimitMin = 20f;
     public float verticalRotationLimitMax = 80f;
-    private float rotateFactor = 15f;
+    private float rotateFactor = 10f;
 
     private Touch prevTouch;
 

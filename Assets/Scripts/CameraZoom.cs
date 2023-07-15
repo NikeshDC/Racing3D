@@ -4,7 +4,7 @@ using UnityEngine;
 public class CameraZoom : MonoBehaviour
 {
     private Camera mCamera;
-    float zoomFactor = 1f;
+    float zoomFactor = 0.3f;
     public float fieldOfViewMax = 50;
     public float fieldOfViewMin = 10;
 
