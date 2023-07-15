@@ -13,5 +13,6 @@ public class ResetCar : MonoBehaviour
         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
         Camera.main.transform.position = spawnCameraTransform.position;
         Camera.main.transform.rotation = spawnCameraTransform.rotation;
+        Physics.SyncTransforms();
     }
 }
