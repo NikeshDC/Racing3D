@@ -265,95 +265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2768561119375123993, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Mass
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768561119375123993, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_WheelDampingRate
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859242280059785530, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859242280059785530, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_ImplicitCom
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859242280059785530, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859242280059785530, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_CenterOfMass.y
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3859242280059785530, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007376521593779704, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: maxMotorTorque
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007376521593779704, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: maxBreakingTorque
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007376521593779704, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: axleInfos.Array.data[0].motor
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7322450962430066414, guid: 8b9d29538915c394298eff50c8947a56,
         type: 3}
       propertyPath: m_Name
       value: Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 7322450962430066414, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.6668415
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 2.4829025
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.00019735105
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.14733219
-      objectReference: {fileID: 0}
-    - target: {fileID: 7593248849174842656, guid: 8b9d29538915c394298eff50c8947a56,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.037110925
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1305,8 +1220,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.1756473, y: 0.6400865, z: -0.15358959, w: 0.7320161}
-  m_LocalPosition: {x: 557.77765, y: 21.524416, z: 357.1929}
+  m_LocalRotation: {x: 0.09138791, y: 0.82736, z: -0.14108385, w: 0.53592825}
+  m_LocalPosition: {x: 558.6585, y: 20.44096, z: 359.0257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1369,8 +1284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d03116644b8f0479eabf6c629f6f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fieldOfViewMax: 50
-  fieldOfViewMin: 10
+  zoomSpeed: 1
+  target: {fileID: 1645167489}
+  ZoomInMinDistance: 3
+  ZoomOutMaxDistance: 9
 --- !u!114 &330585549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804a1255aece9b74680e88e4d3333261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1645167489}
+  positionTarget: {fileID: 1874519420}
+  lookAtTarget: {fileID: 1645167489}
   smoothFactor: 1
 --- !u!1 &350413230
 GameObject:
@@ -2073,6 +1991,7 @@ GameObject:
   - component: {fileID: 616743737}
   - component: {fileID: 616743736}
   - component: {fileID: 616743735}
+  - component: {fileID: 616743738}
   m_Layer: 0
   m_Name: TerrainMesh
   m_TagString: Untagged
@@ -2145,6 +2064,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &616743738
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616743733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 7d101bccad1fcfd448204c29867d48e5, type: 2}
 --- !u!1001 &618269907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4928,6 +4869,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b500b329744a358418ed93fe685acea0, type: 3}
+--- !u!4 &1874519420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9177146758513745448, guid: 8b9d29538915c394298eff50c8947a56,
+    type: 3}
+  m_PrefabInstance: {fileID: 73733044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1904506767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5514,7 +5461,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2372225617349582461}
   - component: {fileID: 1137449994549326588}
-  - component: {fileID: 4731576339893840449}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -5625,26 +5571,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d75dd5a39b4f7642b16b3a4cd74f947, type: 3}
---- !u!154 &4731576339893840449
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2520126440968870535}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 56041a2ed16f1874a96ee9805e172d31, type: 2}
-  m_EnableTreeColliders: 1
 --- !u!1001 &5024871919849555374
 PrefabInstance:
   m_ObjectHideFlags: 0

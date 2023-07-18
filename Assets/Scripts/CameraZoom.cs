@@ -1,20 +1,16 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class CameraZoom : MonoBehaviour
 {
-    private Camera mCamera;
-    float zoomFactor = 0.3f;
-    public float fieldOfViewMax = 50;
-    public float fieldOfViewMin = 10;
+    public float zoomSpeed = 0.3f;
+    //public float fieldOfViewMax = 50;
+    //public float fieldOfViewMin = 10;
+
+    public Transform target;
+    public float ZoomInMinDistance;
+    public float ZoomOutMaxDistance;
 
     private float previousBetweenFingerDistance;  //holds distance between two fingers used for zooming in previous frame
-
-
-    private void Start()
-    {
-        mCamera = GetComponent<Camera>();
-    }
 
     private void Update()
     {
@@ -22,8 +18,11 @@ public class CameraZoom : MonoBehaviour
         {
             Touch touch1 = Input.GetTouch(0);
             Touch touch2 = Input.GetTouch(1);
-            if(touch1.phase == TouchPhase.Began || touch2.phase == TouchPhase.Began)
+            if (touch1.phase == TouchPhase.Began || touch2.phase == TouchPhase.Began)
+            {
                 previousBetweenFingerDistance = (touch1.position - touch2.position).magnitude;
+            }
+
             else
                 HandleCameraZoom(touch1, touch2);
         }
@@ -32,18 +31,24 @@ public class CameraZoom : MonoBehaviour
     {
         float currentBetweenFingerDistance = (touch1.position - touch2.position).magnitude;
         float deltaFingerDistance = previousBetweenFingerDistance - currentBetweenFingerDistance;
-        float targetFieldOfView;
+        float zoomDir;
+
+        if (deltaFingerDistance == 0f)
+            return;
 
         if (deltaFingerDistance > 0)
         {
-            targetFieldOfView = fieldOfViewMax;
+            zoomDir = -1f;
         }
         else
         {
-            targetFieldOfView = fieldOfViewMin;
+            zoomDir = 1f;
         }
 
-        mCamera.fieldOfView = Mathf.Lerp(mCamera.fieldOfView, targetFieldOfView, Time.deltaTime * Mathf.Abs(deltaFingerDistance) * zoomFactor);
+        Vector3 newpos = Vector3.LerpUnclamped(transform.position, target.position, Time.deltaTime * zoomSpeed * zoomDir);
+        float newCameraDistance = (newpos - target.position).magnitude;
+        if (newCameraDistance > ZoomInMinDistance && newCameraDistance < ZoomOutMaxDistance)
+            transform.position = newpos;
 
         previousBetweenFingerDistance = currentBetweenFingerDistance;
     }

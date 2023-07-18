@@ -114,6 +114,13 @@ public class CarController : MonoBehaviour
         Color finalColor = backLightBaseColor * emission;
         backlight.SetColor("_EmissionColor", finalColor);
     }
+
+    public void Reset()
+    {
+        ReleaseAccelerate();
+        ReleaseSteering();
+        ReleaseBrake();
+    }
 }
 
 [System.Serializable]

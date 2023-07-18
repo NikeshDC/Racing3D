@@ -8,11 +8,16 @@ public class ResetCar : MonoBehaviour
 
     public void Reset()
     {
-        car.transform.position = spawnPoint.position;
-        car.transform.rotation = spawnPoint.rotation;
-        car.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        Rigidbody carRB = car.GetComponent<Rigidbody>();
+        carRB.velocity = Vector3.zero;
+        carRB.angularVelocity = Vector3.zero;
+        carRB.isKinematic = true;
         Camera.main.transform.position = spawnCameraTransform.position;
         Camera.main.transform.rotation = spawnCameraTransform.rotation;
+        car.transform.position = spawnPoint.position;
+        car.transform.rotation = spawnPoint.rotation;
         Physics.SyncTransforms();
+        carRB.isKinematic = false;
+        car.GetComponent<CarController>().Reset();
     }
 }

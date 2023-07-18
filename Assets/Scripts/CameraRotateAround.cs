@@ -4,7 +4,7 @@ public class CameraRotateAround : MonoBehaviour
 {
     public Transform target;
     public float verticalRotationLimitMin = 20f;
-    public float verticalRotationLimitMax = 80f;
+    public float verticalRotationLimitMax = 70f;
     private float rotateFactor = 10f;
 
     private Touch prevTouch;
